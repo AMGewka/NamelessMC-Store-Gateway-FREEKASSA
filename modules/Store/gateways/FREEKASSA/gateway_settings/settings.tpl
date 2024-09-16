@@ -2,10 +2,15 @@
     <div class="card shadow border-left-primary">
         <div class="card-body">
             <h5><i class="icon fa fa-info-circle"></i> Платежная система <a href="https://freekassa.ru/auth/registration" target="_blank">FREEKASSA</a></h5></br>
-            - <b>Электронные платежи</b>: <b>Карты РФ</b>, <b>Карты Украины</b>, <b>СБП</b>, <b>Perfect Money</b>, <b>Volet</b> и <b>Оплата скинами Steam</b></br>
-            - <b>Криптовалюты</b>: <b>Bitcoin</b>, <b>Bitcoin Cash</b>, <b>Ethereum (ETH)</b>, <b>Tether (TRC-20)</b>, <b>Tether (ERC-20)</b>, <b>Tether (BSC)</b>, <b>Tether (Polygon)</b>, <b>Tether (TON)</b>, <b>Binance Coin (BSC)</b>, <b>Notcoin</b>, <b>TRON</b>, <b>Litecoin</b>, <b>Dogecoin</b>, <b>TON</b> и <b>DASH</b></br></br>
-            - Для регистрации в FREEKASSA используйте <a href="https://freekassa.ru/auth/registration" target="_blank">эту ссылку</a>.</br>
-            - Модуль прошел тесты и работает на версиях магазина 1.7.1 - 1.8.0.
+            - <b>Банковские карты</b>: <b>Карты РФ (МИР\VISA\MasterCard)</b> и <b>Карты Казахстана (KZT\VISA\MasterCard)</b></br>
+            - <b>Электронные платежи</b>: <b>Оплата скинами (Steam)</b>, <b>СБЕР Pay</b>, <b>Онлайн банк</b> и <b>СБП</b></br>
+            - <b>Электронные кошельки</b>: <b>Perfect Money USD</b> и <b>ЮMoney</b></br>
+            - <b>Криптовалюты</b>: <b>Garantex</b>, <b>Bitcoin</b>, <b>Litecoin</b>, <b>Ethereum</b>, <b>USDT (ERC20)</b>, <b>USDT (TRC20)</b>, <b>TON</b>, <b>BNB</b> и <b>Tron</b></br></br>
+            - Для регистрации в <b>FREEKASSA</b> используйте <a href="https://freekassa.ru/auth/registration" target="_blank">эту ссылку</a>.</br>
+            - Модуль прошел тесты и работает на версиях магазина 1.7.1 и выше.</br>
+            - <b>URL Оповещения:</b> https://<Ваш домен>/store/listener/?gateway=FREEKASSA</br>
+            - <b>URL успешной оплаты:</b> https://<Ваш домен>/store/checkout/?do=complete</br>
+            - <b>URL неудачной оплаты:</b> На ваш выбор :)
         </div>
     </div>
 
