@@ -9,6 +9,25 @@
  *  Store module
  */
 require_once(ROOT_PATH . '/modules/Store/classes/StoreConfig.php');
+$freekassa_language = new Language(ROOT_PATH . '/modules/Store/gateways/FREEKASSA/language', LANGUAGE);
+
+$smarty->assign([
+    'SHOP_ID' => $freekassa_language->get('shopid'),
+    'SHOP_KEY1' => $freekassa_language->get('key1'),
+    'SHOP_KEY2' => $freekassa_language->get('key2'),
+    'SHOP_API' => $freekassa_language->get('shopapi'),
+    'ENABLE_GATEWAY' => $freekassa_language->get('enablegateway'),
+    'GATEWAY_NAME' => $freekassa_language->get('gatewayname'),
+    'BANK_CARD' => $freekassa_language->get('bankcard'),
+    'ONLINE_PAYMENTS' => $freekassa_language->get('onlinepay'),
+    'ONLINE_WALLET' => $freekassa_language->get('onlinewal'),
+    'CRYPTOCURRENCIES' => $freekassa_language->get('crypto'),
+    'GATEWAY_LINK' => $freekassa_language->get('gatewaylink'),
+    'GATEWAY_TESTED' => $freekassa_language->get('gatewaytest'),
+    'ALERT_URL' => $freekassa_language->get('alerturl'),
+    'SUCCESS_URL' => $freekassa_language->get('sucurl'),
+    'FAILED_URL' => $freekassa_language->get('failurl')
+]);
 
 if (Input::exists()) {
     if (Token::check()) {

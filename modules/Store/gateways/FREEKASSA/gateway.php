@@ -4,7 +4,7 @@
  *
  * @package Modules\Store
  * @author AMGewka
- * @version 1.8.1
+ * @version 1.8.2
  * @license MIT
  */
 class FREEKASSA_Gateway extends GatewayBase {
@@ -12,7 +12,7 @@ class FREEKASSA_Gateway extends GatewayBase {
     public function __construct() {
         $name = 'FREEKASSA';
         $author = '<a href="https://github.com/AMGewka" target="_blank" rel="nofollow noopener">AMGewka</a>';
-        $gateway_version = '1.8.1';
+        $gateway_version = '1.8.2';
         $store_version = '1.7.1';
         $settings = ROOT_PATH . '/modules/Store/gateways/FREEKASSA/gateway_settings/settings.php';
 
@@ -27,7 +27,7 @@ class FREEKASSA_Gateway extends GatewayBase {
         $secretWord = StoreConfig::get('FREEKASSA.secret1_key');
         
         if ($shopId == null || empty($shopId)) {
-            $this->addError('Администрация не завершила настройку данного шлюза!');
+            $this->addError('The administration has not completed the configuration of this gateway!');
             return;
         }
 
@@ -69,12 +69,12 @@ class FREEKASSA_Gateway extends GatewayBase {
         $sign = md5($_REQUEST['MERCHANT_ID'] . ':' . $_REQUEST['AMOUNT'] . $secretWord . $_REQUEST['MERCHANT_ORDER_ID']);
 
         if($sign != $_REQUEST['SIGN']){
-            die("Ошибка подписи!");
+            die("Signature error!");
         }
 
         $paymentId = $_REQUEST['MERCHANT_ORDER_ID'];
         $orderAmount = $_REQUEST['AMOUNT'];
-        $currency = 'RUB';
+        $currency = $data['currency'];
 
         $payment = new Payment($paymentId, 'transaction');
         if ($payment->exists()) {
