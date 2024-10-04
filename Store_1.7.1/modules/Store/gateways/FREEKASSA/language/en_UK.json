@@ -1,0 +1,17 @@
+{
+    "shopid": "Store ID",
+    "shopapi": "Store API",
+    "key1": "Secret key #1",
+    "key2": "Secret key #2",
+    "enablegateway": "Enable payment method",
+    "gatewayname": " Payment system <a href=\"https://freekassa.ru/auth/registration\" target=\"_blank\">FREEKASSA</a>",
+    "bankcard": "<b>Bank cards</b>: <b>Russian Federation cards (MIR/VISA/MasterCard)</b> and <b>Kazakhstan cards (KZT/VISA/MasterCard)</b>",
+    "onlinepay": "<b>Electronic payments</b>: <b>Payment with skins (Steam)</b>, <b>SBER Pay</b>, <b>Online bank</b> and <b>SBP</b>",
+    "onlinewal": "<b>Electronic wallets</b>: <b>Perfect Money USD</b> and <b>ЮMoney</b>",
+    "crypto": "<b>Cryptocurrencies</b>: <b>Garantex</b>, <b>Bitcoin</b>, <b>Litecoin</b>, <b>Ethereum</b>, <b>USDT (ERC20)</b>, <b>USDT (TRC20)</b>, <b>TON</b>, <b>BNB</b> and <b>Tron</b>",
+    "gatewaylink": "To register in <b>FREEKASSA</b>, use <a href=\"https://freekassa.ru/auth/registration\" target=\"_blank\">this link</a>.",
+    "gatewaytest": "The module has passed tests and works on store versions 1.7.1 and below.",
+    "alerturl": "<b>Alert URL:</b> https://YOUR_DOMAIN/store/listener/?gateway=FREEKASSA",
+    "sucurl": "<b>Successful payment URL:</b> https://YOUR_DOMAIN/store/checkout/?do=complete",
+    "failurl": "<b>Failed payment URL:</b> Your choice :)"
+}

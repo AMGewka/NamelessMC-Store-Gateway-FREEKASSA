@@ -9,12 +9,6 @@
  *  Store module
  */
 require_once(ROOT_PATH . '/modules/Store/classes/StoreConfig.php');
-require_once(ROOT_PATH . '/modules/Store/config.php');
-
-if (isset($store_conf) && is_array($store_conf)) {
-    $GLOBALS['store_config'] = $store_conf;
-}
-
 $freekassa_language = new Language(ROOT_PATH . '/modules/Store/gateways/FREEKASSA/language', LANGUAGE);
 
 $smarty->assign([
