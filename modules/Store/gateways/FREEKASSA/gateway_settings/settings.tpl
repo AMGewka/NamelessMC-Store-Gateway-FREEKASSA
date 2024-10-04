@@ -17,11 +17,11 @@
     <br />
 
 
-<form action="" method="post"><div class="form-group"><label for="inputFREEKASSAId">{$SHOP_ID}</label>
+<form action="" method="post"><div class="form-group"><label for="inputFREEKASSAShopId">{$SHOP_ID}</label>
 <input class="form-control" type="text" id="inputFREEKASSAShopId" name="shopid_key" value="{$SHOP_ID_VALUE}" placeholder="{$SHOP_ID}">
 </div>
 
-<form action="" method="post"><div class="form-group"><label for="inputFREEKASSAapi">{$SHOP_API}</label>
+<form action="" method="post"><div class="form-group"><label for="inputFREEKASSAShopapi">{$SHOP_API}</label>
 <input class="form-control" type="text" id="inputFREEKASSAShopapi" name="shopapi_key" value="{$SHOP_API_VALUE}" placeholder="{$SHOP_API}">
 </div>
 
