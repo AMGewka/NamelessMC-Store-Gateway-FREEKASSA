@@ -4,7 +4,7 @@
  *
  * @package Modules\Store
  * @author AMGewka
- * @version 1.8.3
+ * @version 1.8.4
  * @license MIT
  */
 class FREEKASSA_Gateway extends GatewayBase {
@@ -12,7 +12,7 @@ class FREEKASSA_Gateway extends GatewayBase {
     public function __construct() {
         $name = 'FREEKASSA';
         $author = '<a href="https://github.com/AMGewka" target="_blank" rel="nofollow noopener">AMGewka</a>';
-        $gateway_version = '1.8.3';
+        $gateway_version = '1.8.4';
         $store_version = '1.7.1';
         $settings = ROOT_PATH . '/modules/Store/gateways/FREEKASSA/gateway_settings/settings.php';
 
@@ -58,7 +58,7 @@ class FREEKASSA_Gateway extends GatewayBase {
         $allowedIps = array(
             '168.119.157.136', 
             '168.119.60.227', 
-            '138.201.88.124',
+            '51.250.54.238',
             '178.154.197.79',
         );
 
