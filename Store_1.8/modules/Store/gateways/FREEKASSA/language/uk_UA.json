@@ -1,0 +1,18 @@
+{
+    "shopid": "ID Магазину",
+    "shopapi": "API Магазину",
+    "key1": "Секретний ключ №1",
+    "key2": "Секретний ключ №2",
+    "enablegateway": "Включити спосіб оплати",
+    "gatewayname": " Платіжна система <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\">FREEKASSA</a>",
+    "bankcard": "<b>Банківські карти</b>: <b>Карти Росії</b>, <b>Карти Казахстану</b> та <b>Карти України</b>",
+    "onlinepay": "<b>Електронні платежі</b>: <b>Онлайн банк</b>, <b>СБП</b> та <b>SteamPay</b>",
+    "onlinewal": "<b>Електронні гаманці</b>: <b>Perfect Money USD</b> та <b>ЮMoney</b>",
+    "crypto": "Криптовалюти: Garantex, Bitcoin, Litecoin, Ethereum, <b>USDT (ERC20)</b>, <b>USDT (TRC20)</b>, <b>TON</b>, <b>BNB</b> та <b>Tron</b>",
+    "gatewaylink": "Для реєстрації в <b>FREEKASSA</b> використовуйте <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\"> це посилання</a>.",
+    "alerturl": "<b>URL Оповіщення:</b>",
+    "sucurl": "<b>URL успішної оплати:</b>",
+    "acc_currency": "<b>Підтримувані валюти:</b> <code>RUB</code>, <code>USD</code>, <code>EUR</code>, <code>UAH</code> та <code>KZT</code>",
+    "warinfo1": " Дані для налаштування каси",
+    "warinfo2": "Конфігурація каси"
+}
