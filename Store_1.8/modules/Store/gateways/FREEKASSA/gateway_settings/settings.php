@@ -13,11 +13,12 @@ $freekassa_language = new Language(ROOT_PATH . '/modules/Store/gateways/FREEKASS
 
 if (Input::exists()) {
 	if (Token::check()) {
-		if (isset($_POST['shopid_key']) && isset($_POST['shopapi_key']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && strlen($_POST['shopid_key']) && strlen($_POST['shopapi_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key'])) {
+		if (isset($_POST['shopid_key']) && isset($_POST['shopapi_key']) && isset($_POST['admin_email']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && strlen($_POST['shopid_key']) && strlen($_POST['admin_email']) && strlen($_POST['shopapi_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key'])) {
 			StoreConfig::set('FREEKASSA.shopid_key', $_POST['shopid_key']);
 			StoreConfig::set('FREEKASSA.shopapi_key', $_POST['shopapi_key']);
 			StoreConfig::set('FREEKASSA.secret1_key', $_POST['secret1_key']);
 			StoreConfig::set('FREEKASSA.secret2_key', $_POST['secret2_key']);
+			StoreConfig::set('FREEKASSA.admin_email', $_POST['admin_email']);
 		}
 
 		if (isset($_POST['enable']) && $_POST['enable'] == 'on') $enabled = 1;
@@ -45,6 +46,8 @@ $smarty->assign(
 		'SHOP_API_KEY_2_VALUE' => ((isset($_POST['secret2_key']) && $_POST['secret2_key']) ? Output::getClean(Input::get('secret2_key')) : StoreConfig::get('FREEKASSA.secret2_key')),
 		'PINGBACK_URL' => rtrim(URL::getSelfURL(), '/') . URL::build('/store/listener', 'gateway=FREEKASSA'),
 		'SUCC_URL' => rtrim(URL::getSelfURL(), '/') . URL::build('/store/checkout', 'do=complete'),
+		'ADMIN_EMAIL_VALUE' => ((isset($_POST['admin_email']) && $_POST['admin_email']) ? Output::getClean(Input::get('admin_email')) : StoreConfig::get('FREEKASSA.admin_email')),
+		'ADMIN_EMAIL' => $freekassa_language->get('adminemail'),
 		'SHOP_ID' => $freekassa_language->get('shopid'),
 		'SHOP_KEY1' => $freekassa_language->get('key1'),
 		'SHOP_KEY2' => $freekassa_language->get('key2'),

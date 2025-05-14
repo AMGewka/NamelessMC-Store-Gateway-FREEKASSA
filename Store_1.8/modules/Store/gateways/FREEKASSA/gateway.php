@@ -4,7 +4,7 @@
  *
  * @package Modules\Store
  * @author AMGewka
- * @version 1.8.5
+ * @version 1.8.6
  * @license MIT
  */
 class FREEKASSA_Gateway extends GatewayBase
@@ -13,7 +13,7 @@ class FREEKASSA_Gateway extends GatewayBase
 	{
 		$name = 'FREEKASSA';
 		$author = '<a href="https://github.com/AMGewka" target="_blank" rel="nofollow noopener">AMGewka</a>';
-		$gateway_version = '1.8.5';
+		$gateway_version = '1.8.6';
 		$store_version = '1.7.1';
 		$settings = ROOT_PATH . '/modules/Store/gateways/FREEKASSA/gateway_settings/settings.php';
 
@@ -38,12 +38,10 @@ class FREEKASSA_Gateway extends GatewayBase
 		$currency = $order->getAmount()->getCurrency();
 		$email = $order->customer()->getUser()->data()->email;
 		if (empty($email)) {
-			$email = 'pleaseinput@email.com';
-		}
+        	$email = StoreConfig::get('FREEKASSA.admin_email');
+        }
 		$sign = md5($shopId . ':' . $orderAmount . ':' . $secretWord . ':' . $currency . ':' . $paymentId);
-
 		$paymentUrl = 'https://pay.freekassa.ru/?m=' . $shopId . '&oa=' . $orderAmount . '&o=' . $paymentId . '&s=' . $sign . '&currency=' . $currency . '&em=' . $email;
-
 		header('Location: ' . $paymentUrl);
 	}
 
@@ -62,18 +60,13 @@ class FREEKASSA_Gateway extends GatewayBase
 		$apiKey = StoreConfig::get('FREEKASSA.shopapi_key');
 		$secretWord = StoreConfig::get('FREEKASSA.secret2_key');
 
-		$allowedIps = array(
-			'168.119.157.136',
-			'168.119.60.227',
-			'51.250.54.238',
-			'178.154.197.79',
-		);
+		$allowedIps = array('168.119.157.136', '168.119.60.227', '178.154.197.79', '51.250.54.238');
 
 		if (!in_array($_SERVER['REMOTE_ADDR'], $allowedIps)) {
-			die("bad ip!");
+			die("Unknown IP");
 		}
 
-		$sign = md5($_REQUEST['MERCHANT_ID'] . ':' . $_REQUEST['AMOUNT'] . $secretWord . $_REQUEST['MERCHANT_ORDER_ID']);
+		$sign = md5($_REQUEST['MERCHANT_ID'] . ':' . $_REQUEST['AMOUNT'] . ':' . $secretWord . ':' . $_REQUEST['MERCHANT_ORDER_ID']);
 
 		if ($sign != $_REQUEST['SIGN']) {
 			die("Signature error!");
@@ -81,14 +74,13 @@ class FREEKASSA_Gateway extends GatewayBase
 
 		$paymentId = $_REQUEST['MERCHANT_ORDER_ID'];
 		$orderAmount = $_REQUEST['AMOUNT'];
-		$currency = $data['currency'];
 
 		$payment = new Payment($paymentId, 'transaction');
 		if ($payment->exists()) {
 			$data = [
 				'transaction' => $paymentId,
 				'amount_cents' => Store::toCents($orderAmount),
-				'currency' => $currency,
+				'currency' => Store::getCurrency(),
 				'fee_cents' => '0'
 			];
 		} else {
@@ -97,7 +89,7 @@ class FREEKASSA_Gateway extends GatewayBase
 				'gateway_id' => $this->getId(),
 				'transaction' => $paymentId,
 				'amount_cents' => Store::toCents($orderAmount),
-				'currency' => $currency,
+				'currency' => Store::getCurrency(),
 				'fee_cents' => '0'
 			];
 		}

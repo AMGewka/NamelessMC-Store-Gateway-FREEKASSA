@@ -12,6 +12,7 @@
     "gatewaylink": "Для регистрации в <b>FREEKASSA</b> используйте <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\">эту ссылку</a>.",
     "alerturl": "<b>URL Оповещения:</b>",
     "sucurl": "<b>URL успешной оплаты:</b>",
+    "adminemail": "Email админа сайта (Если покупки будет делать не авторизированный пользователь, то будет использоваться указанный email для создания транзакции)",
     "acc_currency": "<b>Поддерживаемые валюты:</b> <code>RUB</code>, <code>USD</code>, <code>EUR</code>, <code>UAH</code> и <code>KZT</code>",
     "warinfo1": " Данные для настройки кассы",
     "warinfo2": " Конфигурация кассы"

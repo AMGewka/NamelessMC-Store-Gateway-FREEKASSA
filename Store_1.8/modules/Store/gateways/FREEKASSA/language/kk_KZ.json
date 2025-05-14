@@ -1,0 +1,19 @@
+{
+  "shopid": "Дүкен ID",
+  "shopapi": "Дүкен API кілті",
+  "key1": "Құпия кілт №1",
+  "key2": "Құпия кілт №2",
+  "enablegateway": "Төлем әдісін қосу",
+  "gatewayname": " Төлем жүйесі <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\">FREEKASSA</a>",
+  "bankcard": "<b>Банктік карталар</b>: <b>Ресей карталары</b>, <b>Қазақстан карталары</b> және <b>Украина карталары</b>",
+  "onlinepay": "<b>Электронды төлемдер</b>: <b>Онлайн банк</b>, <b>СБП</b> және <b>SteamPay</b>",
+  "onlinewal": "<b>Электронды әмияндар</b>: <b>Perfect Money USD</b> және <b>YuMoney</b>",
+  "crypto": "<b>Криптовалюталар</b>: <b>Garantex</b>, <b>Bitcoin</b>, <b>Litecoin</b>, <b>Ethereum</b>, <b>USDT (ERC20)</b>, <b>USDT (TRC20)</b>, <b>TON</b>, <b>BNB</b> және <b>Tron</b>",
+  "gatewaylink": "<b>FREEKASSA</b> жүйесіне тіркелу үшін <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\">осы сілтемені</a> пайдаланыңыз.",
+  "alerturl": "<b>Хабарлама URL:</b>",
+  "sucurl": "<b>Сәтті төлем URL:</b>",
+  "adminemail": "Сайт әкімшісінің электронды поштасы (Егер сатып алуды авторланбаған пайдаланушы жасаса, транзакцияны жасау үшін осы электронды пошта қолданылады)",
+  "acc_currency": "<b>Қолдау көрсетілетін валюталар:</b> <code>RUB</code>, <code>USD</code>, <code>EUR</code>, <code>UAH</code> және <code>KZT</code>",
+  "warinfo1": " Касса параметрлерін орнату үшін деректер",
+  "warinfo2": " Касса конфигурациясы"
+}

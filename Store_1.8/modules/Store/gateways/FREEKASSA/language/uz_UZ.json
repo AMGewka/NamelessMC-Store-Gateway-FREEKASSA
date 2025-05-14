@@ -1,0 +1,19 @@
+{
+  "shopid": "Do‘kon ID raqami",
+  "shopapi": "Do‘kon API kaliti",
+  "key1": "Maxfiy kalit №1",
+  "key2": "Maxfiy kalit №2",
+  "enablegateway": "To‘lov usulini yoqish",
+  "gatewayname": " To‘lov tizimi <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\">FREEKASSA</a>",
+  "bankcard": "<b>Bank kartalari</b>: <b>Rossiya kartalari</b>, <b>Qozog‘iston kartalari</b> va <b>Ukraina kartalari</b>",
+  "onlinepay": "<b>Elektron to‘lovlar</b>: <b>Onlayn bank</b>, <b>SBP</b> va <b>SteamPay</b>",
+  "onlinewal": "<b>Elektron hamyonlar</b>: <b>Perfect Money USD</b> va <b>YuMoney</b>",
+  "crypto": "<b>Kriptovalyutalar</b>: <b>Garantex</b>, <b>Bitcoin</b>, <b>Litecoin</b>, <b>Ethereum</b>, <b>USDT (ERC20)</b>, <b>USDT (TRC20)</b>, <b>TON</b>, <b>BNB</b> va <b>Tron</b>",
+  "gatewaylink": "<b>FREEKASSA</b> tizimida ro‘yxatdan o‘tish uchun <a href=\"https://freekassa.com/auth/registration?inv=amgewka&input_type=hidden\" target=\"_blank\">ushbu havoladan</a> foydalaning.",
+  "alerturl": "<b>Xabarnoma URL manzili:</b>",
+  "sucurl": "<b>Muvaffaqiyatli to‘lov URL manzili:</b>",
+  "adminemail": "Sayt administratorining elektron pochtasi (Agar foydalanuvchi tizimga kirmagan bo‘lsa, tranzaktsiyani yaratish uchun ushbu email ishlatiladi)",
+  "acc_currency": "<b>Qo‘llab-quvvatlanadigan valyutalar:</b> <code>RUB</code>, <code>USD</code>, <code>EUR</code>, <code>UAH</code> va <code>KZT</code>",
+  "warinfo1": " Kassa sozlamalari uchun ma’lumotlar",
+  "warinfo2": " Kassa konfiguratsiyasi"
+}
